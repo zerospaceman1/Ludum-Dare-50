@@ -1,0 +1,47 @@
+Ludum Dare 50
+Theme: Delay the inevitable
+
+simple puzzle game
+- water dam at top
+- town at bottom
+- dam bursts and water begins "flowing" to town.  
+- tile based, starts with a straight 'river' path to town-
+- like Dr. Mario you get a selection of 3 different pipe or redirection 'pieces' that you can place over the existing 'tiles' and redirect the route of the water.
+- goal is to delay the water from reaching and flodding the town for as long as possible, maybe there's no way to last forever, but maybe you get points by having the town evacuate every second/minute you delay?
+- turn based or real time?  
+
+- add 'rocks' that mean you can't put pipes in that tile
+
+- pipes cost money?  Money accumulates over time?  Some pipes cost more, so maybe it's worth seeing what comes next and saving money for better pipe?
+
+BONUS content
+- add delay pipes that slow the lava flow over that tile
+- 'bridge' pipe, you can place this over existing pipe tile or even rock.  costs more
+
+- maybe there are natural 'canals' in the ground that the player can use?!
+
+
+
+
+
+Game Notes
+- 1024x768 game area.  Stretches when higher resolutions used, but doesn't distort
+- tile size is 32 pixels
+- play area (where you can place tiles) is 3 tiles from top (32x3 = 96px) and 3 tiles from bottom , 768 - (96*2) = 576 height, and 1024 - (32*5) = 864px width.  32*5=160px for the left bar menu.
+	- 96px on top and bottom for volcano and town
+		- lava spawns at very top of screen, which means there are three tiles that cannot be built on where lava must flow through first.  This gives the player some time to think at the start.
+- tiles spawn every 30 seconds? on the left bar, 3 at a time.  You can also see a preview of 1 of the possible next 3 tiles to spawn next.  This lets the player skip the current set and save for the next one
+	- tiles cost 'money', some are more expensive than others.  every 30 seconds the player earns 'money' automatically.  (maybe the player earns more money for each person evacuated?)  This is so if the player must decide to spend money on the cirrent set of tiles or save for the next.
+	- maybe the player has to buy ALL the tiles in the set or none?  INTERESTING  (bought tiles would then appear in a spot bottom left of the screen?
+	
+- player can place bought tiles in any spot on the grid except on boulders
+	- player can rotate tiles?
+	
+- when lava reaches the town it is destroyed and game is over
+	- scoring is based on time delayed, shown as people evacuated
+	- lava always flows straight down if not in a canal tile, and thus will hit the city faster
+	- if in a canal lava can even flow up
+	
+	
+
+	
